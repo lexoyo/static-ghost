@@ -1,0 +1,21 @@
+{
+  "name": "static-ghost",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "postinstall": "npm run clone:ghost && npm run init:ghost",
+    "start": "npm run load && npm run serve",
+    "stop": "npm run save && pm2 stop Ghost",
+
+    "load": "cp -r ./content/* Ghost/content/",
+    "serve": "cd Ghost && pm2 start index.js --name Ghost",
+    "save": "cp -r Ghost/content/* ./content/ && buster generate && cp -r static/* ./ && rm -rf static",
+    "clone:ghost": "git clone https://github.com/TryGhost/Ghost.git",
+    "init:ghost": "cd Ghost/ && npm i && node_modules/.bin/knex-migrator init && node_modules/.bin/grunt init"
+  },
+  "author": "lexoyo",
+  "license": "MIT",
+  "dependencies": {
+    "pm2": "^2.0.19"
+  }
+}
