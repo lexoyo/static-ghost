@@ -3,15 +3,13 @@ This project makes it simple to have a [Ghost](http://ghost.org/) blog hosted on
 
 ## Instructions
 
-### Requirements
-
-You need to have [Buster](https://github.com/axitkhurana/buster/) installed (a few easy steps).
-
-[Fork and clone this repository](https://github.com/lexoyo/static-ghost) to your computer
-
 ### Installation
 
-Clone and install Ghost:
+You need to have [Buster](https://github.com/axitkhurana/buster/) installed (basically a `pip install buster`).
+
+Fork this repository and clone it on your computer.
+
+This command will clone and install Ghost:
 
 ```
 $ npm install
@@ -19,7 +17,7 @@ $ npm install
 
 ### Use
 
-Load your site's data and start Ghost
+Load your site's data and start Ghost on `http://localhost:2368/ghost`
 
 ```
 $ npm start
@@ -38,4 +36,3 @@ $ git add -A
 $ git commit -am "your commit message"
 $ git push origin gh-pages
 ```
-
